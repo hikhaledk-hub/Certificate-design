@@ -1,0 +1,258 @@
+/* إعدادات عامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* حاوية الشهادة بأبعاد A4 أفقي */
+.certificate-container {
+    width: 1000px;
+    height: 700px;
+    background: #ffffff;
+    padding: 40px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f4f9f5 100%);
+}
+
+/* الإطار الداخلي الأنيق باللون الأخضر والذهبي */
+.certificate-container::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid #1b4332;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.inner-border {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+    border: 1px solid #d4af37;
+    pointer-events: none;
+}
+
+/* الهيدر والشعار */
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.medad-logo {
+    width: 65px;
+    height: 65px;
+}
+
+.brand-name h2 {
+    color: #1b4332;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.brand-name span {
+    color: #d4af37;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* ختم الاعتماد */
+.seal {
+    width: 90px;
+    height: 90px;
+    border: 2px dashed #d4af37;
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.seal-inner {
+    display: flex;
+    flex-direction: column;
+    color: #1b4332;
+    font-size: 10px;
+}
+
+.seal-inner strong {
+    color: #d4af37;
+    font-size: 13px;
+}
+
+/* محتوى الشهادة الرئيسي */
+.cert-body {
+    text-align: center;
+    z-index: 2;
+    margin-top: -10px;
+}
+
+.cert-title {
+    color: #1b4332;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.award-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.recipient-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d6a4f;
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding: 0 30px 5px 30px;
+    margin-bottom: 20px;
+}
+
+.cert-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.highlight-course {
+    color: #1b4332;
+    font-weight: 800;
+    font-size: 22px;
+    direction: ltr;
+    display: inline-block;
+}
+
+.sub-features {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+    word-spacing: 5px;
+}
+
+/* التواقيع والتاريخ */
+.cert-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.signature-box {
+    text-align: center;
+    width: 180px;
+}
+
+.signature-line {
+    font-family: 'Cairo', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1b4332;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.signature-title {
+    font-size: 14px;
+    color: #666;
+}
+
+.cert-date {
+    text-align: center;
+}
+
+.cert-date .label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.cert-date .date-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1b4332;
+}
+
+.cert-slogan {
+    text-align: center;
+    font-size: 13px;
+    color: #d4af37;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* زر الطباعة */
+.action-buttons {
+    margin-top: 25px;
+}
+
+.action-buttons button {
+    background-color: #1b4332;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #2d6a4f;
+}
+
+/* تنسيقات الطباعة (PDF) */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .action-buttons {
+        display: none;
+    }
+    .certificate-container {
+        box-shadow: none;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
